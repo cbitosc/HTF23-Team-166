@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Child Mental Health Picture Analysis</title>
+</head>
+<body>
+    <h1>Child Mental Health Picture Analysis</h1>
+
+    <div id="images">
+        <img src="happy.jpeg" data-emotion="happy" height="250px" width="250px" alt="Picture for analysis">
+        <img src="sad.jpeg" data-emotion="sad" height="250px" width="250px" alt="Picture for analysis">
+        <img src="anger.jpeg" data-emotion="anger" height="250px" width="250px" alt="Picture for analysis">
+        <img src="fun.jpeg" data-emotion="fun" height="250px" width="250px" alt="Picture for analysis">
+        <img src="stress.jpeg" data-emotion="stress" height="250px" width="250px" alt="Picture for analysis">
+        <img src="dep.jpeg" data-emotion="depressed" height="250px" width="250" alt="Picture for analysis">
+    </div>
+
+    <form action="#" method="POST" id="picture-analysis-form">
+        <label for="child-input">Describe the picture from your perspective:</label>
+        <textarea name="child-input" rows="4" cols="50" required></textarea>
+        <br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    <div id="analysis-result">
+        <!-- Analysis result will be displayed here -->
+    </div>
+
+    <script>
+        const emotions = ['happy', 'sad', 'anger', 'fun', 'stress', 'depressed'];
+
+        const imageContainer = document.getElementById('image-container');
+        const analysisImage = document.getElementById('analysis-image');
+        const pictureAnalysisForm = document.getElementById('picture-analysis-form');
+        const analysisResultContainer = document.getElementById('analysis-result');
+
+        let currentIndex = 0;
+
+        function displayImage(index) {
+            const images = document.querySelectorAll('#images img');
+            analysisImage.src = images[index].src;
+        }
+
+        function analyzePicture(description, emotion) {
+            // Simulate AI-based analysis (this is a placeholder)
+            const analysisResult = `Based on the description, it seems like you are feeling ${emotion}.`;
+
+            // Display the analysis result
+            analysisResultContainer.innerHTML = `<h2>Analysis Result:</h2><p>${analysisResult}</p>`;
+        }
+
+        displayImage(currentIndex);
+
+        pictureAnalysisForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const childInput = document.querySelector('textarea[name="child-input"]');
+            const description = childInput.value;
+            const emotion = emotions[currentIndex];
+
+            analyzePicture(description, emotion);
+
+            // Display the next image for analysis
+            currentIndex = (currentIndex + 1) % emotions.length;
+            displayImage(currentIndex);
+
+            // Clear the input field
+            childInput.value = '';
+        });
+    </script>
+</body>
+</html>

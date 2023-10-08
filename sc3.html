@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Well-being Self Assessment</title>
+    <style>
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .radio-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CHILDREN SELF ASSESSMENT</h1>
+    <form id="assessmentForm">
+
+        <!-- ... (Questionnaire HTML) ... -->
+
+        <button type="button" id="calculateButton">Calculate Score</button>
+        
+    </form>
+
+    <div id="result" style="display:none;">
+        <h2>Assessment Result:</h2>
+        <p>Your score is: <span id="score">0%</span></p>
+        <button type="button" id="openResultPage">Open Result Page</button>
+    </div>
+
+    <script>
+        document.getElementById("calculateButton").addEventListener("click", function () {
+            const answers = document.querySelectorAll("input[type=radio]:checked");
+            let score = 0;
+
+            answers.forEach((answer) => {
+                score += parseInt(answer.value);
+            });
+
+            const totalQuestions = answers.length; // Total number of questions answered
+            const maxScore = totalQuestions * 5; // Max score when all answers are "Very Negative"
+
+            const percentage = ((score / maxScore) * 100).toFixed(2);
+
+            document.getElementById("score").textContent = percentage + "%";
+            document.getElementById("result").style.display = "block";
+        });
+
+        // Open a new page with the score when the "Open Result Page" button is clicked
+        document.getElementById("openResultPage").addEventListener("click", function () {
+            const score = document.getElementById("score").textContent;
+            const resultPage = window.open("", "_blank");
+            resultPage.document.write("<h1>Assessment Result</h1>");
+            resultPage.document.write("<p>Your score is: " + score + "</p>");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="score2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Well-being Self Assessment</title>
+    <style>
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .radio-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CHILDREN SELF ASSESSMENT</h1>
+    <form id="assessmentForm">
+
+        <div class="question">
+            <p>1. How would you describe your overall mood recently?</p>
+            <label class="radio-label"><input type="radio" name="mood" value="1"> Very Positive</label>
+            <label class="radio-label"><input type="radio" name="mood" value="2"> Generally Positive</label>
+            <label class="radio-label"><input type="radio" name="mood" value="3"> Neutral</label>
+            <label class="radio-label"><input type="radio" name="mood" value="4"> Somewhat Negative</label>
+            <label class="radio-label"><input type="radio" name="mood" value="5"> Very Negative</label>
+        </div>
+
+        <div class="question">
+            <p>2. How have you been sleeping lately?</p>
+            <label class="radio-label"><input type="radio" name="sleep" value="1"> Very Well</label>
+            <label class="radio-label"><input type="radio" name="sleep" value="2"> Mostly Well</label>
+            <label class="radio-label"><input type="radio" name="sleep" value="3"> Sometimes Well, Sometimes Poorly</label>
+            <label class="radio-label"><input type="radio" name="sleep" value="4"> Mostly Poorly</label>
+            <label class="radio-label"><input type="radio" name="sleep" value="5"> Very Poorly</label>
+        </div>
+
+        <div class="question">
+            <p>3. Have you experienced any significant changes in your appetite or eating habits recently?</p>
+            <label class="radio-label"><input type="radio" name="appetite" value="0"> No changes</label>
+            <label class="radio-label"><input type="radio" name="appetite" value="1"> Eating more than usual</label>
+            <label class="radio-label"><input type="radio" name="appetite" value="2"> Eating less than usual</label>
+            <label class="radio-label"><input type="radio" name="appetite" value="3"> Changes, but I'm not sure</label>
+        </div>
+
+        <div class="question">
+            <p>4. Do you often feel overwhelmed by stress or anxiety?</p>
+            <label class="radio-label"><input type="radio" name="stress" value="1"> Not at all</label>
+            <label class="radio-label"><input type="radio" name="stress" value="2"> Occasionally</label>
+            <label class="radio-label"><input type="radio" name="stress" value="3"> Sometimes</label>
+            <label class="radio-label"><input type="radio" name="stress" value="4"> Often</label>
+            <label class="radio-label"><input type="radio" name="stress" value="5"> Constantly</label>
+        </div>
+
+        <div class="question">
+            <p>5. How well have you been able to concentrate on tasks or work?</p>
+            <label class="radio-label"><input type="radio" name="concentration" value="1"> Very Well</label>
+            <label class="radio-label"><input type="radio" name="concentration" value="2"> Well</label>
+            <label class="radio-label"><input type="radio" name="concentration" value="3"> Fairly Well</label>
+            <label class="radio-label"><input type="radio" name="concentration" value="4"> Not Very Well</label>
+            <label class="radio-label"><input type="radio" name="concentration" value="5"> Not Well at All</label>
+        </div>
+
+        <div class="question">
+            <p>6. Have you noticed any changes in your interest or enthusiasm for things you used to enjoy?</p>
+            <label class="radio-label"><input type="radio" name="interest" value="1"> No changes</label>
+            <label class="radio-label"><input type="radio" name="interest" value="2"> Less interested</label>
+            <label class="radio-label"><input type="radio" name="interest" value="3"> Much less interested</label>
+            <label class="radio-label"><input type="radio" name="interest" value="4"> I've lost interest in many things</label>
+        </div>
+        <div class="question">
+            <p>7. Do you feel socially connected and satisfied with your relationships?</p>
+            <label class="radio-label"><input type="radio" name="relationships" value="1"> Very Satisfied</label>
+            <label class="radio-label"><input type="radio" name="relationships" value="2"> Satisfied</label>
+            <label class="radio-label"><input type="radio" name="relationships" value="3"> Somewhat Satisfied</label>
+            <label class="radio-label"><input type="radio" name="relationships" value="4"> Not Very Satisfied</label>
+            <label class="radio-label"><input type="radio" name="relationships" value="5"> Unsatisfied</label>
+        </div>
+
+        <div class="question">
+            <p>8. How would you rate your overall energy levels recently?</p>
+            <label class="radio-label"><input type="radio" name="energy" value="1"> Very High</label>
+            <label class="radio-label"><input type="radio" name="energy" value="2"> High</label>
+            <label class="radio-label"><input type="radio" name="energy" value="3"> Moderate</label>
+            <label class="radio-label"><input type="radio" name="energy" value="4"> Low</label>
+            <label class="radio-label"><input type="radio" name="energy" value="5"> Very Low</label>
+        </div>
+
+        <div class="question">
+            <p>9. Have you had thoughts of self-harm or hurting yourself in any way?</p>
+            <label class="radio-label"><input type="radio" name="selfharm" value="1"> No</label>
+            <label class="radio-label"><input type="radio" name="selfharm" value="2"> Rarely</label>
+            <label class="radio-label"><input type="radio" name="selfharm" value="3"> Sometimes</label>
+            <label class="radio-label"><input type="radio" name="selfharm" value="4"> Often</label>
+            <label class="radio-label"><input type="radio" name="selfharm" value="5"> Yes</label>
+        </div>
+
+        <div class="question">
+            <p>10. Have you talked to someone about your feelings or concerns lately?</p>
+            <label class="radio-label"><input type="radio" name="talked" value="1"> Yes, I've discussed them with friends or family</label>
+            <label class="radio-label"><input type="radio" name="talked" value="2"> Yes, I've sought professional help</label>
+            <label class="radio-label"><input type="radio" name="talked" value="3"> No, I haven't talked to anyone</label>
+            <label class="radio-label"><input type="radio" name="talked" value="4"> I'm unsure what to do</label>
+        </div>
+
+        <button type="button" id="calculateButton">Calculate Score</button>
+        
+    </form>
+
+    <div id="result" style="display:none;">
+        <h2>Assessment Result:</h2>
+        <p>Your score is: <span id="score">0%</span></p>
+        <button type="button" id="recommendationButton" style="display: none;">Recommendation</button>
+        <button type="button" id="round2Button" style="display: none;">Round2</button>
+    </div>
+
+    <script>
+        document.getElementById("calculateButton").addEventListener("click", function () {
+            const answers = document.querySelectorAll("input[type=radio]:checked");
+            let score = 0;
+
+            answers.forEach((answer) => {
+                score += parseInt(answer.value);
+            });
+
+            const totalQuestions = answers.length; // Total number of questions answered
+            const maxScore = totalQuestions * 5; // Max score when all answers are "Very Negative"
+
+            const percentage = ((score / maxScore) * 100).toFixed(2);
+
+            document.getElementById("score").textContent = percentage + "%";
+            document.getElementById("result").style.display = "block";
+
+            // Determine which button to display based on the score
+            const recommendationButton = document.getElementById("recommendationButton");
+            const round2Button = document.getElementById("round2Button");
+
+            if (percentage < 50) {
+                recommendationButton.style.display = "block";
+                recommendationButton.addEventListener("click", function () {
+                    window.location.href = "recommendation.html";
+                });
+            } else {
+                round2Button.style.display = "block";
+                round2Button.addEventListener("click", function () {
+                    window.location.href = "round2.html";
+                });
+            }
+        });
+    </script>
+</body>
+</html>

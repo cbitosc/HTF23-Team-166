@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+	font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 600px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    max-width: 250px;
+    margin: 0; 
+    padding: 20px; 
+    display: block;
+    float: left;
+}
+
+.form-box {
+    clear: both;
+}
+
+.tab {
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.tab button {
+    background-color: #007bff;
+    color: #fff;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 30px;
+    transition: background-color 0.3s;
+    border-radius: 10px 10px 0 0;
+    font-size: 16px;
+}
+
+.tab button:hover {
+    background-color: #0056b3;
+}
+
+.tabcontent {
+    display: none;
+    padding: 30px;
+    background-color: #f4f4f4;
+    border-radius: 0 0 10px 10px;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 24px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.sign-in-btn,
+.sign-up-btn {
+    margin-top: 20px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Child Mental Health Assessment</title>
+</head>
+<body>
+    <h1>Child Mental Health Assessment</h1>
+    <form>
+        <!-- ... (Questionnaire HTML) ... -->
+
+        <!-- Add a div to display the mental health score -->
+        <div id="mental-health-score">
+            Mental Health Score: <span id="score">Calculating...</span>%
+        </div>
+
+        <!-- Two buttons for redirection -->
+        <button id="recommendations-button" style="display: none;">Recommendations</button>
+        <button id="round2-button" style="display: none;">Round 2</button>
+    </form>
+
+    <script>
+        // Function to calculate a random mental health score as a percentage
+        function calculateRandomMentalHealthScore() {
+            // Generate a random score between 0 and 100
+            const randomScore = Math.floor(Math.random() * 101);
+
+            // Display the random score on the page
+            const scoreElement = document.getElementById('score');
+            scoreElement.textContent = randomScore;
+
+            // Get the buttons for redirection
+            const recommendationsButton = document.getElementById('recommendations-button');
+            const round2Button = document.getElementById('round2-button');
+
+            // Add click event listeners to the buttons for redirection
+            recommendationsButton.addEventListener('click', function () {
+                window.location.href = 'recommendation.html';
+            });
+
+            round2Button.addEventListener('click', function () {
+                window.location.href = 'pic.html'; // Updated to 'pic.html'
+            });
+
+            // Determine which button to display based on the score
+            if (randomScore <= 50) {
+                recommendationsButton.style.display = 'block';
+            } else {
+                round2Button.style.display = 'block';
+            }
+        }
+
+        // Calculate a random mental health score when the page is loaded
+        window.addEventListener('load', calculateRandomMentalHealthScore);
+    </script>
+</body>
+</html>

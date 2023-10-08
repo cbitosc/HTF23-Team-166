@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Child Mental Health Picture Analysis</title>
+</head>
+<body>
+    <h1>Child Mental Health Picture Analysis</h1>
+
+    <div id="images">
+        <img src="happy.jpeg" data-emotion="happy" height="250px" width="250px" alt="Picture for analysis">
+        <img src="sad.jpeg" data-emotion="sad" height="250px" width="250px" alt="Picture for analysis">
+        <img src="anger.jpeg" data-emotion="anger" height="250px" width="250px" alt="Picture for analysis">
+        <img src="fun.jpeg" data-emotion="fun" height="250px" width="250px" alt="Picture for analysis">
+        <img src="stress.jpeg" data-emotion="stress" height="250px" width="250px" alt="Picture for analysis">
+        <img src="dep.jpeg" data-emotion="depressed" height="250px" width="250" alt="Picture for analysis">
+    </div>
+    <div class="question">
+        <p>1. which picture do you like the most?</p>
+        <label class="radio-label"><input type="radio" name="mood" value="1"> 1</label>
+        <label class="radio-label"><input type="radio" name="mood" value="2"> 2</label>
+        <label class="radio-label"><input type="radio" name="mood" value="4"> 3</label>
+        <label class="radio-label"><input type="radio" name="mood" value="3"> 4</label>
+        <label class="radio-label"><input type="radio" name="mood" value="5"> 5</label>
+        <label class="radio-label"><input type="radio" name="mood" value="6"> 6</label>
+    </div>
+
+    <div class="question">
+        <p>2. select the picture which you feel as the most happiest picture?</p>
+        <label class="radio-label"><input type="radio" name="mood" value="1"> 1</label>
+        <label class="radio-label"><input type="radio" name="mood" value="2"> 2</label>
+        <label class="radio-label"><input type="radio" name="mood" value="4"> 3</label>
+        <label class="radio-label"><input type="radio" name="mood" value="3"> 4</label>
+        <label class="radio-label"><input type="radio" name="mood" value="5"> 5</label>
+        <label class="radio-label"><input type="radio" name="mood" value="6"> 6</label>
+    </div>
+
+    <div class="question">
+        <p>3. Have you experienced any significant changes in your appetite or eating habits recently?</p>
+        <label class="radio-label"><input type="radio" name="appetite" value="0"> No changes</label>
+        <label class="radio-label"><input type="radio" name="appetite" value="1"> Eating more than usual</label>
+        <label class="radio-label"><input type="radio" name="appetite" value="2"> Eating less than usual</label>
+        <label class="radio-label"><input type="radio" name="appetite" value="3"> Changes, but I'm not sure</label>
+    </div>
+
+    <div class="question">
+        <p>4. Do you often feel overwhelmed by stress or anxiety?</p>
+        <label class="radio-label"><input type="radio" name="stress" value="1"> Not at all</label>
+        <label class="radio-label"><input type="radio" name="stress" value="2"> Occasionally</label>
+        <label class="radio-label"><input type="radio" name="stress" value="3"> Sometimes</label>
+        <label class="radio-label"><input type="radio" name="stress" value="4"> Often</label>
+        <label class="radio-label"><input type="radio" name="stress" value="5"> Constantly</label>
+    </div>
+
+    <div class="question">
+        <p>5. How well have you been able to concentrate on tasks or work?</p>
+        <label class="radio-label"><input type="radio" name="concentration" value="1"> Very Well</label>
+        <label class="radio-label"><input type="radio" name="concentration" value="2"> Well</label>
+        <label class="radio-label"><input type="radio" name="concentration" value="3"> Fairly Well</label>
+        <label class="radio-label"><input type="radio" name="concentration" value="4"> Not Very Well</label>
+        <label class="radio-label"><input type="radio" name="concentration" value="5"> Not Well at All</label>
+    </div>
+
+    <div class="question">
+        <p>6. Have you noticed any changes in your interest or enthusiasm for things you used to enjoy?</p>
+        <label class="radio-label"><input type="radio" name="interest" value="1"> No changes</label>
+        <label class="radio-label"><input type="radio" name="interest" value="2"> Less interested</label>
+        <label class="radio-label"><input type="radio" name="interest" value="3"> Much less interested</label>
+        <label class="radio-label"><input type="radio" name="interest" value="4"> I've lost interest in many things</label>
+    </div>
+    <div class="question">
+        <p>7. Do you feel socially connected and satisfied with your relationships?</p>
+        <label class="radio-label"><input type="radio" name="relationships" value="1"> Very Satisfied</label>
+        <label class="radio-label"><input type="radio" name="relationships" value="2"> Satisfied</label>
+        <label class="radio-label"><input type="radio" name="relationships" value="3"> Somewhat Satisfied</label>
+        <label class="radio-label"><input type="radio" name="relationships" value="4"> Not Very Satisfied</label>
+        <label class="radio-label"><input type="radio" name="relationships" value="5"> Unsatisfied</label>
+    </div>
+
+    <div class="question">
+        <p>8. How would you rate your overall energy levels recently?</p>
+        <label class="radio-label"><input type="radio" name="energy" value="1"> Very High</label>
+        <label class="radio-label"><input type="radio" name="energy" value="2"> High</label>
+        <label class="radio-label"><input type="radio" name="energy" value="3"> Moderate</label>
+        <label class="radio-label"><input type="radio" name="energy" value="4"> Low</label>
+        <label class="radio-label"><input type="radio" name="energy" value="5"> Very Low</label>
+    </div>
+
+    <div class="question">
+        <p>9. Have you had thoughts of self-harm or hurting yourself in any way?</p>
+        <label class="radio-label"><input type="radio" name="selfharm" value="1"> No</label>
+        <label class="radio-label"><input type="radio" name="selfharm" value="2"> Rarely</label>
+        <label class="radio-label"><input type="radio" name="selfharm" value="3"> Sometimes</label>
+        <label class="radio-label"><input type="radio" name="selfharm" value="4"> Often</label>
+        <label class="radio-label"><input type="radio" name="selfharm" value="5"> Yes</label>
+    </div>
+
+    <div class="question">
+        <p>10. Have you talked to someone about your feelings or concerns lately?</p>
+        <label class="radio-label"><input type="radio" name="talked" value="1"> Yes, I've discussed them with friends or family</label>
+        <label class="radio-label"><input type="radio" name="talked" value="2"> Yes, I've sought professional help</label>
+        <label class="radio-label"><input type="radio" name="talked" value="3"> No, I haven't talked to anyone</label>
+        <label class="radio-label"><input type="radio" name="talked" value="4"> I'm unsure what to do</label>
+    </div>-->
+
+    <div id="analysis-result">
+        <!-- Analysis result will be displayed here -->
+    </div>
+
+    <script>
+        const emotions = ['happy', 'sad', 'anger', 'fun', 'stress', 'depressed'];
+
+        const analysisImage = document.getElementById('analysis-image');
+        const analysisResultContainer = document.getElementById('analysis-result');
+
+        let currentIndex = 0;
+
+        function displayImage(index) {
+            const images = document.querySelectorAll('#images img');
+            analysisImage.src = images[index].src;
+        }
+
+        function analyzePicture(emotion) {
+            // Simulate AI-based analysis (this is a placeholder)
+            const analysisResult = `You are viewing an image associated with the emotion: ${emotion}.`;
+
+            // Display the analysis result
+            analysisResultContainer.innerHTML = `<h2>Analysis Result:</h2><p>${analysisResult}</p>`;
+        }
+
+        displayImage(currentIndex);
+
+        // Automatically analyze the first image when the page loads
+        analyzePicture(emotions[currentIndex]);
+
+        currentIndex++; // Move to the next image
+
+        // Display the next image for analysis
+        currentIndex = (currentIndex + 1) % emotions.length;
+        displayImage(currentIndex);
+    </script>
+</body>
+</html>

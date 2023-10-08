@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN IN AND SIGN UP</title>
+    <script src="https://kit.fontawesome.com/86e3f07fec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="log.jpg" alt="Logo">
+        </div>
+        <div class="form-box">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'signIn')" id="defaultOpen">Sign In</button>
+                <button class="tablinks" onclick="openTab(event, 'signUp')">Sign Up</button>
+            </div>
+
+            <!-- Sign In Form -->
+            <div id="signIn" class="tabcontent" style="display: block;">
+                <h1>Sign In</h1>
+                <form method="POST">
+                    <input type="text" name="signInEmail" placeholder="Email" required>
+                    <input type="password" name="signInPassword" placeholder="Password" required>
+                    <button type="button" class="sign-in-btn" id="signInBtn">Sign In</button>
+                </form>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signUp" class="tabcontent">
+                <h1>Sign Up</h1>
+                <form method="POST">
+                    <input type="text" name="signUpName" placeholder="Name" required>
+                    <input type="text" name="signUpEmail" placeholder="Email" required>
+                    <input type="password" name="signUpPassword" placeholder="Password" required>
+                    <button type="button" class="sign-up-btn" id="signUpBtn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript function to open the default tab
+        function defaultTab() {
+            const signInButton = document.getElementById("defaultOpen");
+            signInButton.click(); // Open the default tab
+        }
+
+        // Call the defaultTab function when the page loads
+        window.onload = defaultTab;
+
+        // Handle form submissions when clicking the buttons below the fields
+        document.getElementById("signInBtn").addEventListener("click", function() {
+            const signInForm = document.querySelector("#signIn form");
+            signInForm.action = "process.php"; // Set the action for sign-in
+            signInForm.submit(); // Submit the sign-in form
+        });
+
+        document.getElementById("signUpBtn").addEventListener("click", function() {
+            const signUpForm = document.querySelector("#signUp form");
+            signUpForm.action = "process.php"; // Set the action for sign-up
+            signUpForm.submit(); // Submit the sign-up form
+        });
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+	<script src="remainders.js"></script
+</body>
+</html>

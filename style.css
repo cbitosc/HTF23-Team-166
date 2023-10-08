@@ -1,0 +1,94 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 400px;
+    padding: 30px; /* Increased padding for better spacing */
+    text-align: center;
+    border-radius: 10px; /* Increased border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    max-width: 300px; /* Increased logo size */
+    margin: 0 auto;
+    display: block;
+}
+
+.tab {
+    overflow: hidden;
+    margin-top: 30px; /* Increased margin for better spacing */
+}
+
+.tab button {
+    background-color: #007bff;
+    color: #fff;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 30px; /* Increased button size */
+    transition: background-color 0.3s;
+    border-radius: 10px 10px 0 0; /* Increased border radius */
+    font-size: 16px; /* Increased button font size */
+}
+
+.tab button:hover {
+    background-color: #0056b3;
+}
+
+.tabcontent {
+    display: none;
+    padding: 30px; /* Increased padding for better spacing */
+    background-color: #f4f4f4;
+    border-radius: 0 0 10px 10px; /* Increased border radius */
+}
+
+h1 {
+    color: #007bff;
+    font-size: 24px; /* Increased header font size */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0; /* Increased margin for better spacing */
+    border: 2px solid #007bff; /* Increased border thickness */
+    border-radius: 10px;
+    font-size: 16px; /* Increased input font size */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Increased button size */
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px; /* Increased button font size */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.sign-in-btn,
+.sign-up-btn {
+    margin-top: 20px; /* Increased margin for better spacing */
+}

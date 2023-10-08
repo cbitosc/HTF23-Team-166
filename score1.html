@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Child Mental Health Assessment</title>
+</head>
+<body>
+    <h1>Child Mental Health Assessment</h1>
+    <form>
+        <!-- ... (Questionnaire HTML) ... -->
+
+        <!-- Add a div to display the mental health score -->
+        <div id="mental-health-score">
+            Mental Health Score: <span id="score">Calculating...</span>%
+        </div>
+
+        <!-- Two buttons for redirection -->
+        <button id="picture-button">See Pictures</button>
+        <button id="recommendation-button">Get Recommendations</button>
+    </form>
+
+    <script>
+        // Function to calculate a random mental health score as a percentage
+        function calculateRandomMentalHealthScore() {
+            // Generate a random score between 0 and 100
+            const randomScore = Math.floor(Math.random() * 101);
+
+            // Display the random score on the page
+            const scoreElement = document.getElementById('score');
+            scoreElement.textContent = randomScore;
+
+            // Add click event listeners to the buttons for redirection
+            const pictureButton = document.getElementById('picture-button');
+            const recommendationButton = document.getElementById('recommendation-button');
+
+            pictureButton.addEventListener('click', function () {
+                if (randomScore > 50) {
+                    window.location.href = 'picture.html';
+                }
+            });
+
+            recommendationButton.addEventListener('click', function () {
+                if (randomScore <= 50) {
+                    window.location.href = 'recommendation.html';
+                }
+            });
+        }
+
+        // Calculate a random mental health score when the page is loaded
+        window.addEventListener('load', calculateRandomMentalHealthScore);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<?php
+if (isset($_POST["submit"])/*$_SERVER["REQUEST_METHOD"] == "POST"*/) {
+    $name = filter_input(INPUT_POST, 'name');
+    $email = filter_input(INPUT_POST, 'email');
+    $password = filter_input(INPUT_POST, 'password');
+
+    if (!empty($name) && !empty($email) && !empty($password)) {
+        $host = "localhost";
+        $username = "root";
+        $db_password = "";
+        $dbname = "idyllic";
+
+        $conn = new mysqli($host, $username, $db_password, $dbname);
+
+        if (mysqli_connect_error()) {
+            die('Connection Error(' . mysqli_connect_errno() . ')' . mysqli_connect_error());
+        }
+
+        $sql = "INSERT INTO login (name, email, password) VALUES ('$name', '$email', '$password')";
+
+        if (mysqli_query($conn, $sql)) {
+            echo "Signed Up!";
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+        }
+
+        $conn->close();
+    } else {
+        echo "Fields should not be empty";
+    }
+}
+?>
