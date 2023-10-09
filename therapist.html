@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="Therapist.css">
+    <title>Find a Therapist</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+</head>
+<body>
+    <h1>Find a Therapist</h1>
+
+    <form id="therapist-search-form">
+        <label for="city">Enter the city:</label>
+        <input type="text" id="city" name="city" required>
+        <label for="mental-state">Area:</label>
+        <textarea id="mental-state" name="mental-state" required></textarea>
+        <button type="submit">Search</button>
+    </form>
+
+    <div id="results">
+        <!-- Therapist results will be displayed here -->
+    </div>
+
+    <script>
+        const form = document.getElementById('therapist-search-form');
+        const resultsContainer = document.getElementById('results');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const city = document.getElementById('city').value;
+            const mentalState = document.getElementById('mental-state').value;
+
+            // Simulate fetching therapist data (replace with actual API call)
+            const therapists = [
+                { name: 'Therapist 1', address: '123 Main St', phone: '555-123-4567' },
+                { name: 'Therapist 2', address: '456 Elm St', phone: '555-987-6543' },
+                // Add more therapist data as needed
+            ];
+
+            // Display therapist results
+            displayTherapists(therapists);
+        });
+
+        function displayTherapists(therapists) {
+            resultsContainer.innerHTML = '<h2>Recommended Therapists:</h2>';
+            if (therapists.length === 0) {
+                resultsContainer.innerHTML += '<p>No therapists found in the specified city.</p>';
+            } else {
+                therapists.forEach(function (therapist) {
+                    resultsContainer.innerHTML += `
+                        <div>
+                            <h3>${therapist.name}</h3>
+                            <p>Address: ${therapist.address}</p>
+                            <p>Phone: ${therapist.phone}</p>
+                        </div>
+                    `;
+                });
+            }
+        }
+    </script>
+</body>
+</html>

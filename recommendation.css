@@ -1,0 +1,36 @@
+/* Reset some default browser styles */
+body, h1, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h4 {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Style for specific h4 elements */
+h4:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    h4 {
+        font-size: 16px;
+    }
+}

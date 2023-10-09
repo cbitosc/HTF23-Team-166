@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"IDYLLIC"</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+    <header>
+        <h1><img src="images/log.jpg" height="50px" width="50px"> IDYLLIC</h1>
+    </header>
+    
+    <main>
+        <section id="welcome">
+            <h2>Welcome to the Assessment</h2>
+
+            <p>Take a moment to evaluate your mental health and well-being.</p>
+
+            <button id="start-assessment"> <a href="login1.html"> Start Assessment </a></button>
+        </section>
+
+        <section id="questions">
+            
+        </section>
+
+        <section id="results">
+           
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; IDYLLIC </p>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Well-being Self Assessment</title>
+    <style>
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .radio-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CHILDREN SELF ASSESSMENT</h1>
+    <form action="process_responses.php" method="post"> <!-- Replace 'process_responses.php' with your form handling script -->
+
+        <div class="question">
+            <p>1. How would you describe your overall mood recently?</p>
+            <label class="radio-label"><input type="radio" name="mood" value="Very Positive"> Very Positive</label>
+            <label class="radio-label"><input type="radio" name="mood" value="Generally Positive"> Generally Positive</label>
+            <label class="radio-label"><input type="radio" name="mood" value="Neutral"> Neutral</label>
+            <label class="radio-label"><input type="radio" name="mood" value="Somewhat Negative"> Somewhat Negative</label>
+            <label class="radio-label"><input type="radio" name="mood" value="Very Negative"> Very Negative</label>
+        </div>
+
+        <div class="question">
+            <p>2. How have you been sleeping lately?</p>
+            <label class="radio-label"><input type="radio" name="sleep" value="Very Well"> Very Well</label>
+            <label class="radio-label"><input type="radio" name="sleep" value="Mostly Well"> Mostly Well</label>
+            <label class="radio-label"><input type="radio" name="sleep" value="Sometimes Well, Sometimes Poorly"> Sometimes Well, Sometimes Poorly</label>
+            <label class="radio-label"><input type="radio" name="sleep" value="Mostly Poorly"> Mostly Poorly</label>
+            <label class="radio-label"><input type="radio" name="sleep" value="Very Poorly"> Very Poorly</label>
+        </div>
+
+        <div class="question">
+            <p>3. Have you experienced any significant changes in your appetite or eating habits recently?</p>
+            <label class="radio-label"><input type="radio" name="appetite" value="No changes"> No changes</label>
+            <label class="radio-label"><input type="radio" name="appetite" value="Eating more than usual"> Eating more than usual</label>
+            <label class="radio-label"><input type="radio" name="appetite" value="Eating less than usual"> Eating less than usual</label>
+            <label class="radio-label"><input type="radio" name="appetite" value="Changes, but I'm not sure"> Changes, but I'm not sure</label>
+        </div>
+
+        <div class="question">
+            <p>4. Do you often feel overwhelmed by stress or anxiety?</p>
+            <label class="radio-label"><input type="radio" name="stress" value="Not at all"> Not at all</label>
+            <label class="radio-label"><input type="radio" name="stress" value="Occasionally"> Occasionally</label>
+            <label class="radio-label"><input type="radio" name="stress" value="Sometimes"> Sometimes</label>
+            <label class="radio-label"><input type="radio" name="stress" value="Often"> Often</label>
+            <label class="radio-label"><input type="radio" name="stress" value="Constantly"> Constantly</label>
+        </div>
+
+        <div class="question">
+            <p>5. How well have you been able to concentrate on tasks or work?</p>
+            <label class="radio-label"><input type="radio" name="concentration" value="Very Well"> Very Well</label>
+            <label class="radio-label"><input type="radio" name="concentration" value="Well"> Well</label>
+            <label class="radio-label"><input type="radio" name="concentration" value="Fairly Well"> Fairly Well</label>
+            <label class="radio-label"><input type="radio" name="concentration" value="Not Very Well"> Not Very Well</label>
+            <label class="radio-label"><input type="radio" name="concentration" value="Not Well at All"> Not Well at All</label>
+        </div>
+
+        <div class="question">
+            <p>6. Have you noticed any changes in your interest or enthusiasm for things you used to enjoy?</p>
+            <label class="radio-label"><input type="radio" name="interest" value="No changes"> No changes</label>
+            <label class="radio-label"><input type="radio" name="interest" value="Less interested"> Less interested</label>
+            <label class="radio-label"><input type="radio" name="interest" value="Much less interested"> Much less interested</label>
+            <label class="radio-label"><input type="radio" name="interest" value="I've lost interest in many things"> I've lost interest in many things</label>
+        </div>
+
+        <div class="question">
+            <p>7. Do you feel socially connected and satisfied with your relationships?</p>
+            <label class="radio-label"><input type="radio" name="relationships" value="Very Satisfied"> Very Satisfied</label>
+            <label class="radio-label"><input type="radio" name="relationships" value="Satisfied"> Satisfied</label>
+            <label class="radio-label"><input type="radio" name="relationships" value="Somewhat Satisfied"> Somewhat Satisfied</label>
+            <label class="radio-label"><input type="radio" name="relationships" value="Not Very Satisfied"> Not Very Satisfied</label>
+            <label class="radio-label"><input type="radio" name="relationships" value="Unsatisfied"> Unsatisfied</label>
+        </div>
+
+        <div class="question">
+            <p>8. How would you rate your overall energy levels recently?</p>
+            <label class="radio-label"><input type="radio" name="energy" value="Very High"> Very High</label>
+            <label class="radio-label"><input type="radio" name="energy" value="High"> High</label>
+            <label class="radio-label"><input type="radio" name="energy" value="Moderate"> Moderate</label>
+            <label class="radio-label"><input type="radio" name="energy" value="Low"> Low</label>
+            <label class="radio-label"><input type="radio" name="energy" value="Very Low"> Very Low</label>
+        </div>
+
+        <div class="question">
+            <p>9. Have you had thoughts of self-harm or hurting yourself in any way?</p>
+            <label class="radio-label"><input type="radio" name="selfharm" value="No"> No</label>
+            <label class="radio-label"><input type="radio" name="selfharm" value="Rarely"> Rarely</label>
+            <label class="radio-label"><input type="radio" name="selfharm" value="Sometimes"> Sometimes</label>
+            <label class="radio-label"><input type="radio" name="selfharm" value="Often"> Often</label>
+            <label class="radio-label"><input type="radio" name="selfharm" value="Yes"> Yes</label>
+        </div>
+
+        <div class="question">
+            <p>10. Have you talked to someone about your feelings or concerns lately?</p>
+            <label class="radio-label"><input type="radio" name="talked" value="Yes, I've discussed them with friends or family"> Yes, I've discussed them with friends or family</label>
+            <label class="radio-label"><input type="radio" name="talked" value="Yes, I've sought professional help"> Yes, I've sought professional help</label>
+            <label class="radio-label"><input type="radio" name="talked" value="No, I haven't talked to anyone"> No, I haven't talked to anyone</label>
+            <label class="radio-label"><input type="radio" name="talked" value="I'm unsure what to do"> I'm unsure what to do</label>
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
